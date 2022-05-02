@@ -1,0 +1,16 @@
+package com.gl.javafsd.lab3.Brackets;
+
+public class BracketsDriverClass {
+	public static void main(String[] args) {
+		test('([[{}]])');
+		test('([[{}]]))');
+		test('<{}>');
+		test('<{]>');
+		test('<{[[]]}}>');
+	}
+	public static void test(String brackets) {
+		BalancedBracketsChecker check=new BalancedBracketsChecker(brackets);
+		
+	}
+
+}

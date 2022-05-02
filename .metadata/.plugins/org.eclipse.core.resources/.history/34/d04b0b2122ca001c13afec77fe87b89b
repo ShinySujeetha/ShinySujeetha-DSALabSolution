@@ -1,0 +1,21 @@
+package com.gl.javafsd.lab3.Brackets;
+
+import java.util.Set;
+import java.util.LinkedHashSet;
+
+public class BracketsManager {
+	private static Set<Brackets> preDefinedBrackets;
+	
+	public BracketsManager() {
+		
+	}
+	
+	static {
+		preDefinedBrackets=new LinkedHashSet<Brackets>();
+		
+		preDefinedBrackets.add(new Brackets('(',')'));
+		preDefinedBrackets.add(new Brackets('(',')'));
+		preDefinedBrackets.add(new Brackets('(',')'));
+		
+	}
+	}

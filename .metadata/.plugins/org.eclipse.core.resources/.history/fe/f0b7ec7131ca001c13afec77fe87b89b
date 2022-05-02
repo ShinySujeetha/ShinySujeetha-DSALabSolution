@@ -1,0 +1,21 @@
+package com.gl.javafsd.lab3.Brackets;
+
+public class BracketsDriverClass {
+	public static void main(String[] args) {
+		test("([[{}]])");
+		test("([[{}]]))");
+		test("<{}>");
+		test("<{]>");
+		test("<{[[]]}}>");
+	}
+	public static void test(String brackets) {
+		BalancedBracketsChecker checker=new BalancedBracketsChecker(brackets);
+		boolean result=checker.check();
+		if(result)
+			System.out.println("The entered String has balanced brackets.");
+		else
+			System.out.println("The entered String doesnot have balanced brackets. ");
+		
+	}
+
+}

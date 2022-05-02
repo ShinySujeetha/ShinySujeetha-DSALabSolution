@@ -1,0 +1,50 @@
+package com.gl.javafsd.lab3.Brackets;
+
+import java.util.Set;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+
+public class BracketsManager {
+	private static Set<Brackets> preDefinedBrackets;
+	
+	public BracketsManager() {
+		//
+	}
+	
+	static {
+		preDefinedBrackets=new LinkedHashSet<Brackets>();
+		preDefinedBrackets.add(new Brackets('(',')'));
+		preDefinedBrackets.add(new Brackets('(',')'));
+		preDefinedBrackets.add(new Brackets('(',')'));	
+	}
+	
+	public static Set<Character> getOpenBrackets(){
+		Set<Character> result=new LinkedHashSet<Character>();
+		Iterator<Brackets> iterator=preDefinedBrackets.iterator();
+		
+		while(iterator.hasNext()) {
+			Brackets brackets=iterator.next();
+			result.add(brackets.getOpenBracket());	
+		}
+		return result;		
+	}
+	
+	public static Set<Character> getCloseBrackets(){
+		Set<Character> result=new LinkedHashSet<Character>();
+		Iterator<Brackets> iterator=preDefinedBrackets.iterator();
+		
+		while(iterator.hasNext()) {
+			Brackets brackets=iterator.next();
+			result.add(brackets.getCloseBracket());	
+		}
+		return result;		
+	}
+	
+	public static Brackets getBrackets(Character closeBracket) {
+		for (Brackets preDefinedBracket:preDefinedBrackets) {
+			if(preDefinedBracket.getCloseBracket().equals(closeBracket))
+				return preDefinedBracket;
+		}
+		return null;
+	}
+}

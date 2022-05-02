@@ -1,0 +1,28 @@
+package com.gl.javafsd.lab3.Brackets;
+import java.util.Set;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+
+public class BalancedBracketsChecker {
+	private String brackets;
+	
+	public BalancedBracketsChecker(String brackets) {
+		this.brackets = brackets;
+	}
+	
+	public static Set<Character> getOpenBrackets(){
+		Set<Character> result=new LinkedHashSet<Character>();
+		Iterator<Brackets> iterator=preDefinedBrackets.Iterator();
+		
+		while(iterator.hasNext()) {
+			Brackets brackets=iterator.next();
+			result.add(brackets.getCloseBracket());
+			
+		}
+		
+		
+		
+		
+	}
+
+}

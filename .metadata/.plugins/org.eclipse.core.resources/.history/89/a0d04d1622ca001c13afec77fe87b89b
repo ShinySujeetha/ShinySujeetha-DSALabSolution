@@ -1,0 +1,28 @@
+package com.gl.javafsd.lab3.Brackets;
+import java.util.Set;
+import java.util.Stack;
+
+
+public class BalancedBracketsChecker {
+	private static Object preDefinedBrackets;
+	private String brackets;
+	
+	public BalancedBracketsChecker(String brackets) {
+		this.brackets = brackets;
+	}
+	
+	public boolean check(){
+		if(brackets.length()%2!=0)
+			return false;
+	
+	Stack <Character> stack=new Stack<Character>();
+	Set <Character> openBracketsSet = BracketsManager.getOpenBrackets();
+	Set <Character> closeBracketsSet = BracketsManager.getCloseBrackets();
+	
+	for(int i=0;i<brackets.length();i++) {
+		char aChar = brackets.charAt(i);
+		if(openBracketsSet)
+	}
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.gl.javafsd.lab3.Brackets;
+import java.util.Set;
+
+public class BalancedBracketsChecker {
+	private String brackets;
+	
+	public BalancedBracketsChecker(String brackets) {
+		this.brackets = brackets;
+	}
+
+}
